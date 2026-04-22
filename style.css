@@ -272,10 +272,10 @@ nav ul {
 @media (max-width: 768px) {
     :root {
         --sectionpadding: 60px 25px;
-        --heading: 20px;
-        --subheading: 30px;
-        --paragraph: 18px;
-        --other: 16px;
+        --heading: 18px;
+        --subheading: 24px;
+        --paragraph: 16px;
+        --other: 14px;
     }
 
     .menu {
@@ -308,15 +308,16 @@ nav ul {
     }
 
     .header-bottom {
-        padding: 20px;
+        padding: 25px;
     }
 
     .hero-overlay {
         padding: 60px 25px;
     }
 
+
     .hero-subheading {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .cta-overlay {
