@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+    text-decoration: none;
+}
+
+:root {
+    --heading: 22px;
+    --subheading: 40px;
+    --paragraph: 20px;
+    --other: 18px;
+    --smallgap: 5px;
+    --mediumgap: 20px;
+    --blue: #0d111c;
+    --yellow: #f58b0a;
+    --muted: #868ca3;
+    --white: #fff;
+    --sectionpadding: 90px 300px;
+    --paragraph-small-pad-bot: 15px;
+    --smallmargin-bottom: 30px;
+    --overlay: #00000094;
+}
+
+.muted {
+    color: var(--muted) !important;
+    font-size: var(--paragraph);
+    line-height: 30px;
+}
+
+.yellow-btn {
+    margin-top: 15px;
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--yellow);
+    color: var(--white);
+    font-size: var(--other);
+    border-radius: 3px;
+    transition: 0.2s ease-in;
+}
+
+.white-btn {
+    margin-top: 15px;
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--white);
+    color: var(--yellow);
+    font-size: var(--other);
+    border-radius: 3px;
+    transition: 0.2s ease-in;
+}
+
+.yellow-btn:hover {
+    background-color: var(--blue);
+}
+
+.white-btn:hover {
+    background-color: var(--yellow);
+    color: var(--yellow);
+}
+
+/*header*/
+header {
+    position:sticky;
+    top: 0px;
+}
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 300px;
+    background-color: var(--white);
+}
+
+.header-top {
+    display: flex;
+    gap: var(--mediumgap);
+    align-items: center;
+    padding: 10px 300px;
+    background-color: var(--blue);
+}
+
+.header-top p {
+    display: flex;
+    color: var(--white);
+    gap: 7px;
+}
+
+nav ul {
+    display: flex;
+    gap: var(--mediumgap);
+    list-style: none;
+}
+
+.menu {
+    display: none;
+    background-color: var(--yellow);
+    padding: 10px 10px 7px 10px;
+}
+
+/*hero*/
+.hero {
+    background: url("https://mitc.iaaae.org/wp-content/uploads/2024/12/logo3.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.hero-overlay {
+    background-color: var(--overlay);
+    padding: 80px 800px 80px 300px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: var(--smallgap);
+}
+
+.hero-heading {
+    font-size: var(--heading);
+}
+
+.hero-subheading {
+    font-size: 75px;
+}
+
+.hero-para {
+    font-size: var(--paragraph);
+    margin-top: 15px;
+}
+
+.cta {
+    background-image: url("https: //mitc.iaaae.org/wp-content/uploads/2024/12/logo3.jpg");
+}
+
+.cta-overlay {
+    padding: var(--sectionpadding);
+    background-color: var(--overlay);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+}
+
+.cta-overlay p {
+    font-size: var(--heading);
+}
+
+.cta-overlay h1 {
+    padding-top: 10px;
+    font-size: var(--subheading);
+}
+
+/*testimonial*/
+.testimonials {
+    padding: var(--sectionpadding);
+    background-color: var(--blue);
+    display: flex;
+}
+
+.test-content {
+    flex: 1;
+}
+
+.test-content p {
+    font-size: var(--heading);
+    color: var(--white);
+}
+
+.test-content h1 {
+    padding: 10px 0px;
+    font-size: var(--subheading);
+    color: var(--white);
+}
+
+.test-list {
+    width: 55%;
+    display: flex;
+    gap: var(--mediumgap);
+}
+
+.test {
+    border: 1px solid var(--yellow);
+    flex: 1;
+}
+
+.test-top {
+    background-color: var(--white);
+    padding: 10px;
+    display: flex;
+    gap: var(--mediumgap);
+}
+
+.test-top img {
+    border: 1px solid var(--yellow);
+}
+
+.test-bottom {
+    padding: 10px;
+}
+
+
+/*footer*/
+.footer-top {
+    background-color: var(--blue);
+    padding: var(--sectionpadding);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--mediumgap)
+}
+
+.footer-top div {
+    flex: 1;
+    flex-basis: 300px;
+}
+
+.footer-top div h1,
+.footer-top div img {
+    color: var(--white);
+    font-size: var(--heading);
+    margin-bottom: var(--smallmargin-bottom);
+}
+
+.footer-top div p {
+    color: var(--white);
+    font-size: var(--other);
+    padding-bottom: var(--paragraph-small-pad-bot);
+    transition: ease 0.2s;
+    display: flex;
+    align-items: center;
+    gap: var(--smallgap);
+}
+
+.footer-top div p:hover {
+    color: var(--yellow);
+    font-size: var(--paragraph);
+    padding-bottom: var(--paragraph-small-pad-bot);
+}
+
+.footer-socials {
+    display: flex;
+    gap: var(--mediumgap);
+    margin-top: 5px;
+}
+
+.footer-socials svg {
+    background-color: var(--white);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.footer-bottom {
+    padding: 25px 300px;
+    display: flex;
+    gap: var(--smallgap);
+    justify-content: space-between;
+    background-color: var(--blue);
+    border-top: 1px solid var(--muted);
+}
+
+@media (max-width: 992px) {
+    :root {
+        --sectionpadding: 50px;
+    }
+
+    .header-top {
+        padding: 10px 50px;
+    }
+
+    .header-bottom {
+        padding: 30px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --sectionpadding: 60px 25px;
+        --heading: 20px;
+        --subheading: 30px;
+        --paragraph: 18px;
+        --other: 16px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--yellow);
+        position: absolute;
+        top: 110px;
+        left: 0;
+        padding: 25px;
+        transition: 30s ease;
+        z-index: 100;
+    }
+
+    nav ul li {
+        padding: 10px 0px;
+    }
+
+    nav ul li a {
+        color: var(--white);
+    }
+
+    .header-top {
+        display: none;
+    }
+
+    .header-bottom {
+        padding: 20px;
+    }
+
+    .hero-overlay {
+        padding: 60px 25px;
+    }
+
+    .hero-subheading {
+        font-size: 40px;
+    }
+
+    .cta-overlay {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .test-list {
+        min-width: 100%;
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        padding: 25px;
+        flex-direction: column;
+    }
+}
