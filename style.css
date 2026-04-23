@@ -5,10 +5,15 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 :root {
     --heading: 22px;
     --subheading: 40px;
-    --paragraph: 20px;
+    --paragraph: 18px;
     --other: 18px;
     --smallgap: 5px;
     --mediumgap: 20px;
@@ -24,8 +29,8 @@
 
 .muted {
     color: var(--muted) !important;
-    font-size: var(--paragraph);
-    line-height: 30px;
+    font-size: var(--paragraph) !important;
+    line-height: 28px;
 }
 
 .yellow-btn {
@@ -61,9 +66,10 @@
 
 /*header*/
 header {
-    position:sticky;
+    position: sticky;
     top: 0px;
 }
+
 .header-bottom {
     display: flex;
     justify-content: space-between;
@@ -82,14 +88,14 @@ header {
 
 .header-top p {
     display: flex;
+    align-items: center;
     color: var(--white);
     gap: 7px;
 }
 
-nav ul {
+nav {
     display: flex;
     gap: var(--mediumgap);
-    list-style: none;
 }
 
 .menu {
@@ -122,10 +128,81 @@ nav ul {
 }
 
 .hero-para {
-    font-size: var(--paragraph);
+    font-size: var(--other);
     margin-top: 15px;
+    line-height: 25px;
 }
 
+/*about*/
+.about {
+    display: flex;
+    padding: var(--sectionpadding);
+    gap: var(--mediumgap);
+}
+
+.about p {
+    font-size: var(--heading);
+}
+
+.about h1 {
+    padding-top: 10px;
+    font-size: var(--subheading);
+}
+
+.about-left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-right {
+    width: 40%;
+}
+
+/*services*/
+.services {
+    padding: var(--sectionpadding);
+}
+
+.services p {
+    font-size: var(--heading);
+}
+
+.services h1 {
+    padding-top: 10px;
+    font-size: var(--subheading);
+}
+
+.services select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.services-list {
+    display: flex;
+    margin-top: 15px;
+    gap: var(--mediumgap);
+}
+
+.service {
+    border: 1px solid var(--muted);
+    transition: ease 3s;
+}
+
+.service-bottom {
+    padding: 15px 20px 20px 20px;
+}
+
+.service-bottom h1 {
+    font-size: var(--heading);
+}
+
+/*cta*/
 .cta {
     background-image: url("https: //mitc.iaaae.org/wp-content/uploads/2024/12/logo3.jpg");
 }
@@ -148,11 +225,34 @@ nav ul {
     font-size: var(--subheading);
 }
 
+.cta-overlay button {
+    width: 160px
+}
+
+/*projects*/
+.projects {
+    padding: var(--sectionpadding);
+}
+
+.project-group {
+    display: flex;
+    gap: var(--mediumgap);
+    overflow-X: scroll;
+    scrollbar-width: none;
+    margin-top: 15px;
+}
+
+.project {
+    border: 1px solid var(--muted);
+    min-width: 450px;
+}
+
 /*testimonial*/
 .testimonials {
     padding: var(--sectionpadding);
     background-color: var(--blue);
     display: flex;
+    gap: var(--mediumgap);
 }
 
 .test-content {
@@ -196,6 +296,76 @@ nav ul {
     padding: 10px;
 }
 
+/*contact*/
+.contact {
+    padding: var(--sectionpadding);
+    display: flex;
+    gap: var(--mediumgap);
+    background-color: #f7f7f7;
+}
+
+.contact div {
+    flex: 1;
+}
+
+.contact p {
+    font-size: var(--heading);
+}
+
+.contact h1 {
+    padding-top: 10px;
+    font-size: var(--subheading);
+}
+
+.info {
+    background-color: var(--white);
+    padding: 25px 15px;
+    display: flex;
+    align-items: center;
+    gap: var(--mediumgap);
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    width: 100%;
+    cursor: pointer;
+}
+
+.contact-socials {
+    display: flex;
+    gap: var(--mediumgap);
+    margin: 25px 0px;
+}
+
+.contact-socials svg {
+    background-color: var(--yellow);
+    padding: 5px;
+    border-radius: 4px;
+}
 
 /*footer*/
 .footer-top {
@@ -225,7 +395,7 @@ nav ul {
     transition: ease 0.2s;
     display: flex;
     align-items: center;
-    gap: var(--smallgap);
+    gap: var(--mediumgap);
 }
 
 .footer-top div p:hover {
@@ -274,33 +444,28 @@ nav ul {
         --sectionpadding: 60px 25px;
         --heading: 18px;
         --subheading: 24px;
-        --paragraph: 16px;
-        --other: 14px;
     }
 
     .menu {
         display: block;
     }
 
-    nav ul {
+    nav {
         display: none;
-        flex-direction: column;
         width: 100%;
         background-color: var(--yellow);
         position: absolute;
         top: 110px;
         left: 0;
-        padding: 25px;
         transition: 30s ease;
         z-index: 100;
     }
 
-    nav ul li {
-        padding: 10px 0px;
-    }
-
-    nav ul li a {
+    nav a {
+        padding: 10px 25px;
+        display: block;
         color: var(--white);
+        border-bottom: 1px solid var(--white);
     }
 
     .header-top {
@@ -315,9 +480,26 @@ nav ul {
         padding: 60px 25px;
     }
 
-
     .hero-subheading {
         font-size: 30px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .project {
+        min-width: 250px;
+    }
+
+    /*service*/
+    .services-list {
+        flex-direction: column;
+        gap: var(--mediumgap);
     }
 
     .cta-overlay {
@@ -332,6 +514,10 @@ nav ul {
 
     .test-list {
         min-width: 100%;
+        flex-direction: column;
+    }
+
+    .contact {
         flex-direction: column;
     }
 
