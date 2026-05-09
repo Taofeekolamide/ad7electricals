@@ -15,7 +15,7 @@ html {
     --subheading: 40px;
     --paragraph: 18px;
     --other: 18px;
-    --smallgap: 5px;
+    --largegap: 50px;
     --mediumgap: 20px;
     --blue: #0d111c;
     --yellow: #f58b0a;
@@ -38,10 +38,13 @@ html {
     border: none;
     padding: 10px 20px;
     background-color: var(--yellow);
-    color: var(--white);
     font-size: var(--other);
     border-radius: 3px;
     transition: 0.2s ease-in;
+}
+
+.yellow-btn a {
+    color: var(--white);
 }
 
 .white-btn {
@@ -78,6 +81,10 @@ header {
     background-color: var(--white);
 }
 
+.header-bottom img {
+    width: 150px;
+}
+
 .header-top {
     display: flex;
     gap: var(--mediumgap);
@@ -98,6 +105,14 @@ nav {
     gap: var(--mediumgap);
 }
 
+nav a {
+    color: var(--blue);
+}
+
+nav a:hover {
+    color: var(--yellow);
+}
+
 .menu {
     display: none;
     background-color: var(--yellow);
@@ -106,17 +121,17 @@ nav {
 
 /*hero*/
 .hero {
-    background: url("https://mitc.iaaae.org/wp-content/uploads/2024/12/logo3.jpg") no-repeat center;
+    background: url("./images/bg1.jpg") no-repeat center;
     background-size: cover;
 }
 
 .hero-overlay {
     background-color: var(--overlay);
-    padding: 80px 800px 80px 300px;
+    padding: 130px 800px 130px 300px;
     color: var(--white);
     display: flex;
     flex-direction: column;
-    gap: var(--smallgap);
+    gap: var(--mediumgap);
 }
 
 .hero-heading {
@@ -129,7 +144,6 @@ nav {
 
 .hero-para {
     font-size: var(--other);
-    margin-top: 15px;
     line-height: 25px;
 }
 
@@ -137,7 +151,7 @@ nav {
 .about {
     display: flex;
     padding: var(--sectionpadding);
-    gap: var(--mediumgap);
+    gap: var(--largegap);
 }
 
 .about p {
@@ -156,8 +170,26 @@ nav {
     gap: 10px;
 }
 
+.about-info-list {
+    display: flex;
+    gap: var(--mediumgap);
+}
+
+.about-info {
+    background-color: var(--white);
+    padding: 25px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
 .about-right {
     width: 40%;
+}
+
+.about-right img {
+    border-radius: 10px;
 }
 
 /*services*/
@@ -190,8 +222,20 @@ nav {
 }
 
 .service {
-    border: 1px solid var(--muted);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
     transition: ease 3s;
+    flex: 1;
+}
+
+.imged {
+    height: 570px;
+}
+
+.service img {
+    border-radius: 4px 4px 0px 0px;
+    width: 100%;
+    height: 100%;
 }
 
 .service-bottom {
@@ -204,7 +248,8 @@ nav {
 
 /*cta*/
 .cta {
-    background-image: url("https: //mitc.iaaae.org/wp-content/uploads/2024/12/logo3.jpg");
+    background: url("./images/bg2.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .cta-overlay {
@@ -212,6 +257,7 @@ nav {
     background-color: var(--overlay);
     display: flex;
     align-items: center;
+    gap: var(--largegap);
     justify-content: space-between;
     color: var(--white);
 }
@@ -245,6 +291,10 @@ nav {
 .project {
     border: 1px solid var(--muted);
     min-width: 450px;
+}
+
+.project img {
+    height: 250px;
 }
 
 /*testimonial*/
@@ -419,7 +469,7 @@ form button {
 .footer-bottom {
     padding: 25px 300px;
     display: flex;
-    gap: var(--smallgap);
+    gap: var(--mediumgap);
     justify-content: space-between;
     background-color: var(--blue);
     border-top: 1px solid var(--muted);
@@ -476,6 +526,10 @@ form button {
         padding: 25px;
     }
 
+    .header-bottom img {
+        width: 120px;
+    }
+
     .hero-overlay {
         padding: 60px 25px;
     }
@@ -488,7 +542,15 @@ form button {
         flex-direction: column;
     }
 
+    .about-info-list {
+        flex-direction: column;
+    }
+
     .about-left {
+        width: 100%;
+    }
+
+    .about-right {
         width: 100%;
     }
 
@@ -500,6 +562,10 @@ form button {
     .services-list {
         flex-direction: column;
         gap: var(--mediumgap);
+    }
+
+    .imged {
+        height: 450px;
     }
 
     .cta-overlay {

@@ -9,12 +9,13 @@ menuIcon.addEventListener("click", () => {
 // close menu when a link is clicked
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
-        nav.style.display = "none"
+        if (window.innerWidth <= "768")
+            nav.style.display = "none"
     });
 });
 
 let select = document.getElementById("service-change")
-let current = "electrical-systems-installation";
+let current = "full-house-wiring";
 changeTab(current)
 
 select.addEventListener("change", () => {
@@ -47,5 +48,24 @@ function changeTab(current) {
         document.getElementById("d").style.display = "block"
     }
 }
+
+//counters
+let counter1 = document.getElementById("counter1")
+let count1 = 1
+setInterval(() => {
+    counter1.innerText = count1
+    if (count1 < 22) {
+        count1++
+    }
+}, 100)
+
+let counter2 = document.getElementById("counter2")
+let count2 = 1
+setInterval(() => {
+    counter2.innerText = count2
+    if (count2 < 200) {
+        count2++
+    }
+}, 10)
 
 
